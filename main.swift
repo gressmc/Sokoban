@@ -19,13 +19,13 @@ let border = " ◼️"
 let floor = " ◻️"
 
 var mapLevel1 = ["XXXXXXXX",
-    "X     XX",
-    "X0 #  XX",
-    "XXXX # X",
-    "X      X",
-    "X     @X",
-    "X 0  X X",
-    "XXXXXXXX"]
+                 "X     XX",
+                 "X0 #  XX",
+                 "XXXX # X",
+                 "X      X",
+                 "X     @X",
+                 "X 0  X X",
+                 "XXXXXXXX"]
 
 // Структура комнаты
 struct Room {
@@ -51,11 +51,11 @@ struct Room {
                 switch column {
                 case "X" : tmp = border
                 case "0" : tmp = BoxMark.imageBoxMark
-                BoxMark.position = check(idx, row, String(column))
-                BoxMark.arrayBoxMark.append([BoxMark.position.x:BoxMark.position.y])
+                        BoxMark.position = check(idx, row, String(column))
+                        BoxMark.arrayBoxMark.append([BoxMark.position.x:BoxMark.position.y])
                 case "#" : tmp = Box.imageBox
                 case "@" : tmp = Person.imagePerson
-                Person.position = check(idx, row, String(column))
+                        Person.position = check(idx, row, String(column))
                 default : tmp = floor
                 }
                 field.append(tmp)
